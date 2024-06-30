@@ -190,7 +190,7 @@ strong {
 .animated-info {
   display: inline-block;
   vertical-align: top;
-  width: 350px;
+  width: 250px;
   position: relative;
 }
 
@@ -297,19 +297,21 @@ strong {
   margin: 0 10px;
 }
 
-.doctor{
-  border-radius: 100%;
-  width: 300px;
-  height: 380px;
+.doctor {
+  border-radius: 50%;
+  width: 310px;
+  height: 370px;
   object-fit: cover;
+  box-shadow: 0 0px 70px rgba(113, 113, 113, 0.5);
 }
+
 
 /*---------------------------------------
   NAVIGATION              
 -----------------------------------------*/
 .navbar {
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 19px;
 }
 
 .navbar-brand {
@@ -563,7 +565,7 @@ strong {
     left: auto;
     right: 100%;
     border-left: 0;
-    border-right: 10px solid var(--dark-color);
+    border-right: 10px solid var(--blue-color);
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
   }
@@ -571,7 +573,7 @@ strong {
   .timeline-nodes:nth-child(even) h3::after {
     right: 100%;
     width: 0;
-    border-right: 10px solid var(--dark-color);
+    border-right: 10px solid var(--blue-color);
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
   }
@@ -588,6 +590,7 @@ strong {
   .timeline-icon {
     line-height: 75px;
   }
+  
 }
 
 @media (max-width: 575px) {
@@ -612,6 +615,7 @@ strong {
   .timeline-icon {
     line-height: 70px;
   }
+  
 }
 
 /*---------------------------------------
@@ -719,7 +723,7 @@ strong {
 }
 
 .booking-form #submit-button {
-  background: var(--dark-color);
+  background: var(--blue-color);
   border-bottom: 0;
   font-weight: var(--font-weight-semibold);
   color: var(--white-color);
@@ -728,7 +732,7 @@ strong {
 }
 
 .booking-form #submit-button:hover {
-  background: var(--primary-color);
+  background: var(--dark-color);
 }
 
 /*---------------------------------------
@@ -878,9 +882,9 @@ strong {
     left: 0;
   }
   .doctor{
-    border-radius: 100%;
+    border-radius: 50%;
     width: 300px;
-    height: 380px;
+    height: 360px;
     object-fit: cover;
     margin-left: 35px;
   }
@@ -901,6 +905,7 @@ strong {
   .contact-phone {
     font-size: 12px;
   }
+  
 }
 
 @media screen and (max-width: 360px) {
@@ -926,11 +931,15 @@ strong {
     left: 42px;
   }
   .doctor{
-    border-radius: 100%;
+    border-radius: 50%;
     width: 200px;
-    height: 280px;
+    height: 260px;
     object-fit: cover;
     margin-left: 60px;
   }
+  .logo{
+    font-size: 200px;
+  }
+  
 }
 
