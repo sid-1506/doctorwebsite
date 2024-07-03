@@ -99,7 +99,7 @@
                                     </div>
 
                                     <div class="carousel-item">
-                                        <img src="images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg" class="img-fluid" alt="">
+                                        <img src="images/slider/doctor-s-hand-holding-stethoscope-closeup.jpg" class="img-fluid" alt="">                                        
                                     </div>
                                 </div>
                             </div>
@@ -379,7 +379,7 @@
                     
                         <div class="col-lg-8 col-12 mx-auto">
                             <div class="booking-form">
-                                <h2 class="text-center mb-lg-3 mb-2">Book an Appointment</h2>
+                                <h2 class="text-center mb-lg-3 mb-2">Book an appointment</h2>
                                 <form id="appointmentForm" role="form" action="#booking" method="post" onsubmit="redirectToWhatsApp(event)">
                                     <div class="row">
                                         <div class="col-lg-6 col-12">
@@ -395,7 +395,7 @@
                                         </div>
                             
                                         <div class="col-lg-6 col-12">
-                                            <input type="date" name="date" id="date" value="" class="form-control" placeholder="dd/mm/yyyy" required>
+                                            <input type="date" name="date" id="date" value="" placeholder="date" class="form-control" required>
                                         </div>
                             
                                         <div class="col-12">
@@ -403,10 +403,15 @@
                                         </div>
                             
                                         <div class="col-lg-3 col-md-4 col-6 mx-auto">
-                                            <button type="submit" class="form-control" id="submit-button">Book Now</button>
+                                            <button type="submit" class="form-control" id="submit-button">Book Now</button>                                       
                                         </div>
+                                        
                                     </div>
-                                </form>
+                                </form>  
+                                <div class="col-lg-3 col-md-4 col-6 mx-auto">
+                                    <a href="https://www.google.com/maps/dir//Divine+Homeopathic+clinic+for+child+and+women+health+-+Dr+Saurabh+N+Shah's,+Shop+no+C+%2F40,+Harias+Dream+Park,+behind+Ashoka+hotel,+landmark+Dmart+Opposite+Blue+dart+office,+vedant+school+road,+Hatkesh+Rd,+Mira+Road+East,+Maharashtra+401107/@19.2818883,72.8734262,17z/data=!4m6!4m5!1m0!1m2!1m1!1s0x3be7b05c5c7d93e1:0x591d230cfef34bfb!3e0" target="_blank"><button type="" class="form-control" style="background-color: #000;" id="submit-button">Get Direction <i class="bi bi-geo-alt-fill"></i></button></a>
+                                        
+                                </div>                              
                             </div>                 
                         </div>
 
@@ -463,10 +468,10 @@
                         </ul>
                     </div>
 
-                    <div class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
+                    <span class="col-lg-3 col-12 ms-auto mt-4 mt-lg-0">
                         <!-- <p class="copyright-text">Copyright © the Milan.dev  -->
-                        <br><br>Website by<br> <a href="https://www.instagram.com/krishnakxnt/" target="_parent">Krishnakant Rout</a> & <a href="https://www.instagram.com/mi2anfr/">Milan Dey</a>
-                    </div>
+                        <br><br>Website by<br> <a href="https://www.instagram.com/krishnakxnt/" target="_blank">Krishnakant Rout</a> & <a href="https://www.instagram.com/mi2anfr/" target="_blank">Milan Dey</a>
+                        </span>
 
                 </div>
             </section>
@@ -500,7 +505,7 @@
                 }
                 
                 // Prepare WhatsApp message
-                const whatsappNumber = "+918879458855";
+                const whatsappNumber = "+919987703344";
                 const whatsappMessage = `Full Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nMessage: ${message}`;
                 
                 // Encode WhatsApp message
