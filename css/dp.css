@@ -729,6 +729,7 @@ strong {
   color: var(--white-color);
   text-transform: uppercase;
   margin-top: 35px;
+  border-radius: 30px;
 }
 
 .booking-form #submit-button:hover {
