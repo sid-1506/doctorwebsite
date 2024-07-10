@@ -3,37 +3,37 @@
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
-  --white-color:                  #FFFFFF;
-  --primary-color:                #247cff;
-  --section-bg-color:             #F9F9F9;
-  --dark-color:                   #000000;
-  --blue-color:                   #038BC0;
-  --title-color:                  #565758;
-  --p-color:                      #717275;
-  --border-color:                 #eaeaea;
+  --white-color: #FFFFFF;
+  --primary-color: #247cff;
+  --section-bg-color: #F9F9F9;
+  --dark-color: #000000;
+  --blue-color: #038BC0;
+  --title-color: #565758;
+  --p-color: #717275;
+  --border-color: #eaeaea;
 
-  --body-font-family:             'Open Sans', sans-serif;
+  --body-font-family: 'Open Sans', sans-serif;
 
-  --h1-font-size:                 48px;
-  --h2-font-size:                 36px;
-  --h3-font-size:                 32px;
-  --h4-font-size:                 28px;
-  --h5-font-size:                 24px;
-  --h6-font-size:                 22px;
-  --p-font-size:                  18px;
-  --menu-font-size:               16px;
+  --h1-font-size: 48px;
+  --h2-font-size: 36px;
+  --h3-font-size: 32px;
+  --h4-font-size: 28px;
+  --h5-font-size: 24px;
+  --h6-font-size: 22px;
+  --p-font-size: 18px;
+  --menu-font-size: 16px;
 
-  --font-weight-light:            300;
-  --font-weight-normal:           400;
-  --font-weight-semibold:         600;
-  --font-weight-bold:             700;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
 }
 
 body {
-    background: var(--white-color);
-    font-family: var(--body-font-family);    
-    position: relative;
-    padding-top: 94px;
+  background: var(--white-color);
+  font-family: var(--body-font-family);
+  position: relative;
+  padding-top: 94px;
 }
 
 /*---------------------------------------
@@ -95,7 +95,7 @@ p {
   letter-spacing: 0.5px;
 }
 
-a, 
+a,
 button {
   touch-action: manipulation;
   transition: all 0.3s;
@@ -131,9 +131,9 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow: hidden;
   border-radius: 0;
   text-transform: uppercase;
@@ -221,25 +221,31 @@ strong {
   0% {
     opacity: 0;
   }
+
   5% {
     opacity: 0;
     transform: translateY(5px);
   }
+
   10% {
     opacity: 1;
     transform: translateY(0px);
   }
+
   25% {
     opacity: 1;
     transform: translateY(0px);
   }
+
   30% {
     opacity: 0;
     transform: translateY(5px);
   }
+
   80% {
     opacity: 0;
   }
+
   100% {
     opacity: 0;
   }
@@ -248,7 +254,7 @@ strong {
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
-.hero {  
+.hero {
   padding-top: 0rem;
 }
 
@@ -305,6 +311,23 @@ strong {
   box-shadow: 0 0px 70px rgba(113, 113, 113, 0.5);
 }
 
+@keyframes appear {
+  from{
+    opacity: 0;
+    transform: translate(300px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.doctor{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+
 
 /*---------------------------------------
   NAVIGATION              
@@ -344,8 +367,8 @@ strong {
   padding-bottom: 15px;
 }
 
-.navbar-nav .nav-item.active .nav-link, 
-.nav-link:focus, 
+.navbar-nav .nav-item.active .nav-link,
+.nav-link:focus,
 .nav-link:hover {
   color: var(--dark-color);
 }
@@ -432,10 +455,10 @@ strong {
   flex-direction: row-reverse;
 }
 
-.timeline h3, 
+.timeline h3,
 .timeline p {
   padding: 10px 30px;
-} 
+}
 
 .timeline h3 {
   background: var(--blue-color);
@@ -469,7 +492,7 @@ strong {
 .timeline-nodes:nth-child(odd) .timeline-date {
   text-align: left;
 }
- 
+
 .timeline-nodes:nth-child(even) .timeline-date {
   text-align: right;
 }
@@ -517,9 +540,9 @@ strong {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50%,0);
+  transform: translate(-50%, 0);
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
   z-index: 1;
 }
 
@@ -534,6 +557,7 @@ strong {
 }
 
 @media (max-width: 767px) {
+
   .timeline-nodes:nth-child(odd) h3,
   .timeline-nodes:nth-child(odd) p {
     text-align: left;
@@ -590,7 +614,7 @@ strong {
   .timeline-icon {
     line-height: 75px;
   }
-  
+
 }
 
 @media (max-width: 575px) {
@@ -615,7 +639,7 @@ strong {
   .timeline-icon {
     line-height: 70px;
   }
-  
+
 }
 
 /*---------------------------------------
@@ -786,7 +810,7 @@ strong {
   .hero .container {
     height: 740px;
   }
-  
+
 }
 
 @media screen and (max-width: 991px) {
@@ -850,7 +874,7 @@ strong {
     width: 320px;
     height: 320px;
   }
-  
+
 }
 
 @media screen and (max-width: 767px) {
@@ -882,7 +906,8 @@ strong {
     right: 0;
     left: 0;
   }
-  .doctor{
+
+  .doctor {
     border-radius: 50%;
     width: 300px;
     height: 360px;
@@ -906,7 +931,7 @@ strong {
   .contact-phone {
     font-size: 12px;
   }
-  
+
 }
 
 @media screen and (max-width: 360px) {
@@ -931,16 +956,17 @@ strong {
   .timeline::before {
     left: 42px;
   }
-  .doctor{
+
+  .doctor {
     border-radius: 50%;
     width: 200px;
     height: 260px;
     object-fit: cover;
     margin-left: 60px;
   }
-  .logo{
+
+  .logo {
     font-size: 200px;
   }
-  
-}
 
+}
