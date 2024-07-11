@@ -326,7 +326,7 @@ strong {
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
 }
-.col-lg-6{
+#achieving{
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0 cover 40%;
