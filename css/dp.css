@@ -314,11 +314,11 @@ strong {
 @keyframes appear {
   from{
     opacity: 0;
-    transform: translate(300px);
+    scale: 0.5;
   }
   to{
     opacity: 1;
-    transform: translateX(0px);
+    scale: 1;
   }
 }
 .doctor{
