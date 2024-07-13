@@ -845,7 +845,7 @@ label::before {
   content: '+';
   margin-right: 10px;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 1000;
 }
 
 input[type="radio"] {
