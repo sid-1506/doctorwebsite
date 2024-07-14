@@ -829,12 +829,13 @@ strong {
   content: "\f138";
 }
 
-body .containeracc {
-
+.containeracc {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: auto;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .title {
@@ -845,9 +846,17 @@ body .containeracc {
   text-align: center;
 }
 
+.containeracc {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
 .accordion {
-  margin: 20px;
+  margin: 20px auto;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .accordion li {
@@ -858,7 +867,8 @@ body .containeracc {
   border-radius: 8px;
   background: #e3edf7;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+              -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
 }
 
 .accordion li label {
@@ -899,11 +909,19 @@ input[type="radio"] {
   content: '-';
 }
 
-@media (min-width: 768px) {
+/* Responsive styles */
+@media (max-width: 767px) {
   .accordion {
-    width: 600px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .accordion li {
+    width: 100%;
+    margin: 10px -13px;
   }
 }
+
+
 
 /*---------------------------------------
   BOOKING FORM            
