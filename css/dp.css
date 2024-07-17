@@ -465,10 +465,11 @@ strong {
   left: 50%;
   width: 0;
   border-left: 1px solid var(--border-color);
-  height: 85%;
+  height: 50%; /* Change this line */
   z-index: 1;
   transform: translateX(-50%);
 }
+
 
 .timeline-content {
   position: relative;
@@ -646,7 +647,7 @@ strong {
     top: 60px;
     left: 33px;
     width: 0;
-    height: 90%;
+    height: 0%;
     z-index: 1;
     transform: translateX(-50%);
   }
@@ -694,7 +695,7 @@ strong {
     display: block;
     top: 60px;
     left: 57px;
-    height: 87%;
+    height: 40%;
   }
 
   .timeline-icons {
