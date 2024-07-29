@@ -244,12 +244,17 @@ strong {
   }
 }
 
+
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
 .hero {
   padding-top: 0rem;
 }
+#count{
+   color: var(--blue-color);
+}
+
 
 .hero .container {
   position: relative;
