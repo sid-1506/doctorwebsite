@@ -1,6 +1,12 @@
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zain:wght@200;300;400;700;800;900&display=swap');
+
+
+
 :root {
   --white-color: #ffffff;
   --primary-color: #247cff;
@@ -248,6 +254,7 @@ strong {
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
+
 .hero {
   padding-top: 0rem;
 }
@@ -470,17 +477,16 @@ strong {
   left: 50%;
   width: 0;
   border-left: 1px solid var(--border-color);
-  height: 50%; /* Change this line */
+  height: 50%; /* Default height for desktop view */
   z-index: 1;
   transform: translateX(-50%);
 }
-
 
 .timeline-content {
   position: relative;
   border-radius: 0 0 0.25rem 0.25rem;
   padding: 0px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .timeline-nodes:nth-child(odd) h3,
@@ -555,6 +561,14 @@ strong {
   line-height: 80px;
 }
 
+@media (max-width: 600px) {
+  .timeline::before {
+    height: 900%;
+  }
+}
+
+
+
 .row {
   display: flex;
   margin-bottom: 10px;
@@ -613,12 +627,14 @@ strong {
 }
 
 .text.front {
+  font-family: Nunito;
   color: white; /* Adjust the color of the text */
   font-size: 20px; /* Adjust the font size */
   font-weight: 1px; /* Optional: Make the text bold */
 }
 
 .text.back {
+  font-family: Josefin Sans;
   color: white; /* Text color */
   padding: 3px 10px; /* Optional: Add padding around the text */
   font-size: 15px; /* Adjust the font size */
