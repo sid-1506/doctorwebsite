@@ -40,55 +40,50 @@
     <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
       <div class="container">
         <a class="navbar-brand d-lg-none" href="index.html">
-          <!-- DIVINE
-                        <strong class="d-block">Homeopathic Clinic</strong> -->
           <img class="c-block" src="images/favicon/logo.png" alt="logo" width="6%">
         </a>
-
+    
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
+    
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#hero">Home</a>
+              <a class="nav-link" href="#home">Home</a>
             </li>
-
+    
             <li class="nav-item">
               <a class="nav-link" href="#About">About</a>
             </li>
-
+    
             <li class="nav-item">
               <a class="nav-link" href="#Specialization">Specialization</a>
             </li>
-
+    
             <a class="navbar-brand d-none d-lg-block" href="index.html">
-              <!-- DIVINE
-                                <strong class="d-block">Homeopathic Clinic</strong> -->
-              <img class="logo" src="images/favicon/logo.png" alt="logo" width="5%" style="margin: 0%; padding: 0%;">
+              <img class="logo" src="images/favicon/logo.png" alt="logo" width="30%">
             </a>
-
+    
             <li class="nav-item">
               <a class="nav-link" href="#FAQ">FAQ</a>
             </li>
-
+    
             <li class="nav-item">
               <a class="nav-link" href="#reviews">Testimonials</a>
             </li>
-
-
+    
             <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
-          </ul>
+          </ul> 
         </div>
-
       </div>
     </nav>
+    
 
-    <section class="hero" id="hero">
+    <section class="hero" id="home">
       <div class="container">
         <div class="row">
 
@@ -147,7 +142,7 @@
             <div class="col-lg-6 col-md-6 col-12">
               <h2 class="mb-lg-3 mb-3">Dr Saurabh .N. Shah</h2>
 
-              <p>Dr. Saurabh Shah, an M.D. homeopathic consultant specializing in gynecological and pediatric cases,
+              <p class="doctortext">Dr. Saurabh Shah, an M.D. homeopathic consultant specializing in gynecological and pediatric cases,
                 integrates spirituality with medicine to restore health by achieving mental peace. He graduated from
                 Chandaben Homeopathic Medical College and post-graduated from Kakasaheb Mhaske Homeopathic Medical
                 College
@@ -198,7 +193,8 @@
               <img src="images/gallery/Designer-1.jpg" style="border-radius: 15px;" alt="" width="100%">
               <div class="overlay">
                 <div class="text front">Infertility</div>
-                <div class="text back">Additional information about.</div>
+                <div class="text back">Helping couples conceive naturally using homeopathic treatments and therapies.
+                </div>
               </div>
             </div>
           </div>
@@ -216,7 +212,7 @@
               <img src="images/gallery/Designer-2.jpeg.jpg" style="border-radius: 15px;" alt="" width="100%">
               <div class="overlay">
                 <div class="text front">CHILDREN COMPLAINTS</div>
-                <div class="text back">Additional information about infertility.</div>
+                <div class="text back">Treating common childhood ailments with gentle, effective homeopathic solutions.</div>
               </div>
             </div>
           </div>
@@ -227,7 +223,7 @@
               <img src="images/gallery/Designer-6.jpeg.jpg" style="border-radius: 15px;" alt="" width="100%">
               <div class="overlay">
                 <div class="text front">PREGNANCY MANAGEMENT</div>
-                <div class="text back">Additional information about infertility.</div>
+                <div class="text back">Supporting healthy pregnancies through safe, natural homeopathic care.</div>
               </div>
             </div>
           </div>
@@ -236,7 +232,7 @@
               <img src="images/gallery/Designer-4.jpeg.jpg" style="border-radius: 15px;" alt="" width="100%">
               <div class="overlay">
                 <div class="text front">Skin</div>
-                <div class="text back">Additional information about infertility.</div>
+                <div class="text back">Healing various skin conditions with personalized, natural homeopathic treatments.</div>
               </div>
             </div>
           </div>
@@ -571,8 +567,9 @@
 
   </main>
 
-  <footer class="site-footer section-padding" id="contact">
-    <div class="container">
+  <footer class="site-footer section-padding">
+    <section id="contact" class="section">
+     <div class="container">
       <div class="row">
 
         <div class="col-lg-5 me-auto col-12">
@@ -625,7 +622,7 @@
         </span>
 
       </div>
-      </section>
+    </section>
   </footer>
 
   <!-- JAVASCRIPT FILES -->
@@ -702,7 +699,16 @@
     });
   </script>
 
-
+<script>
+  document.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  });
+</script>
 
   <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
