@@ -266,7 +266,7 @@ strong {
 .hero .container {
   position: relative;
   overflow: hidden;
-  height: 580px;
+  height: 690px;
 }
 
 .heroText {
@@ -302,6 +302,39 @@ strong {
   margin-bottom: 0;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Define the scaling effect */
+@keyframes scaleUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.doctortext {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slide up effect */
+  transition: opacity 2s ease, transform 2s ease; /* Transition for smooth animation */
+}
+
+.doctortext.visible {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Original position */
+}
+
+
 .featured-number {
   color: var(--primary-color);
   font-size: 8rem;
@@ -335,31 +368,40 @@ strong {
 /*---------------------------------------
   NAVIGATION              
 -----------------------------------------*/
+/* Basic styles */
 .navbar {
   padding-top: 20px;
-  padding-bottom: 19px;
+  padding-bottom: 20px;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly less transparent on scroll */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .navbar-brand {
+  position: relative;
   color: var(--primary-color);
   font-size: var(--h5-font-size);
   font-weight: var(--font-weight-bold);
-  margin: 0 -300px;
   padding: 0;
   text-align: center;
+  transition: transform 0.3s ease;
 }
 
-/* .navbar-brand strong {
-  color: var(--p-color);
-  margin-left: -20px;
-  font-size: 12px;
-  position: relative;
-  bottom: 5px;
-} */
+.navbar-brand:hover {
+  transform: scale(1.1);
+}
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  padding-right: 4rem;
+  padding-left: 4rem;
 }
 
 .navbar-nav .nav-link {
@@ -368,16 +410,14 @@ strong {
   font-size: var(--menu-font-size);
   padding-top: 15px;
   padding-bottom: 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-nav .nav-item.active .nav-link,
-.nav-link:focus,
-.nav-link:hover {
-  color: var(--dark-color);
-}
-
-.nav-link:focus {
-  color: var(--p-color);
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
+  color: var(--blue-color);
+  transform: scale(1.1);
 }
 
 .navbar-toggler {
@@ -388,6 +428,11 @@ strong {
   width: 30px;
   height: 35px;
   outline: none;
+  transition: transform 0.3s ease;
+}
+
+.navbar-toggler:hover {
+  transform: rotate(90deg);
 }
 
 .navbar-toggler:focus {
@@ -401,10 +446,7 @@ strong {
 
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before,
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
-  transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease,
-    -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -427,10 +469,7 @@ strong {
 
 .navbar-toggler .navbar-toggler-icon:before,
 .navbar-toggler .navbar-toggler-icon:after {
-  transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
-    -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
@@ -447,6 +486,29 @@ strong {
 .navbar-toggler .navbar-toggler-icon:after {
   top: 8px;
 }
+
+@media (max-width: 600px) {
+  .navbar-brand {
+    margin: 0 -300px;
+  }
+}
+
+/* Add smooth scrolling effect */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Zoom animation */
+.section {
+  transition: transform 0.5s ease;
+  transform: scale(1);
+}
+
+.section.in-view {
+  transform: scale(1.05);
+}
+
+
 
 /*---------------------------------------
   TIMELINE               
@@ -563,7 +625,9 @@ strong {
 
 @media (max-width: 600px) {
   .timeline::before {
-    height: 900%;
+    height: 100%;
+    border-left: none;
+
   }
 }
 
