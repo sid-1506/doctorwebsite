@@ -39,48 +39,85 @@
 
     <nav class="navbar navbar-expand-lg bg-light fixed-top shadow-lg">
       <div class="container">
-        <a class="navbar-brand d-lg-none" href="index.html">
-          <img class="c-block" src="images/favicon/logo.png" alt="logo" width="6%">
+          <a class="navbar-brand d-lg-none">
+              <img class="c-block" src="images/favicon/logo.png" alt="logo" width="6%">
+          </a>
+          <a class="navbar-text mx-auto d-lg-none" href="index.html">
+            Divine
+            <strong class="d-block">Homeopathic Clinic</strong>
         </a>
-    
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-    
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#home">Home</a>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="#About">About</a>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="#Specialization">Specialization</a>
-            </li>
-    
-            <a class="navbar-brand d-none d-lg-block" href="index.html">
-              <img class="logo" src="images/favicon/logo.png" alt="logo" width="35px">
-            </a>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="#FAQ">FAQ</a>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="#reviews">Testimonials</a>
-            </li>
-    
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
-          </ul> 
-        </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#About">About</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#Specialization">Specialization</a>
+                  </li>
+                  <a class="navbar-brand d-none d-lg-block" href="index.html">
+                      <img class="logo" src="images/favicon/logo.png" alt="logo" width="35px">
+                  </a>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#FAQ">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#reviews">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </nav>
+  </nav>
+  
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    (function ($) {
+        "use strict";
+        
+        // Close the navbar when a link is clicked
+        $('.navbar-nav .nav-link').click(function () {
+            $(".navbar-collapse").collapse('hide');
+        });
+
+        // Handle smooth scrolling for internal links
+        $('a[href*="#"]').on('click', function (event) {
+            if (this.pathname === location.pathname && this.hostname === location.hostname) {
+                const target = $(this.hash);
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 74
+                    }, 1000);
+                }
+            }
+        });
+
+        // Change navbar appearance on scroll
+        $(window).on('scroll', function () {
+            const navbar = $('.navbar');
+            if ($(this).scrollTop() > 50) {
+                navbar.addClass('scrolled');
+            } else {
+                navbar.removeClass('scrolled');
+            }
+        });
+
+        // Initialize scrollspy
+        $('body').scrollspy({ target: '#navbarNav', offset: 74 });
+
+    })(jQuery);
+</script>
     
 
     <section class="hero" id="home">
