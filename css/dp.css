@@ -368,12 +368,56 @@ strong {
 /*---------------------------------------
   NAVIGATION              
 -----------------------------------------*/
+
+/* Navbar container */
+
+.navbar-text {
+  color: var(--primary-color);
+  font-size: var(--h5-font-size);
+  font-weight: var(--font-weight-bold);
+  margin: 0 30px;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar-text strong {
+  color: var(--p-color);
+  font-size: 12px;
+  position: relative;
+  bottom: 5px;
+}
+
+.navbar {
+  position: fixed; /* Fixes the navbar to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 0;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply the blur effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000; /* Ensure the navbar is above other content */
+}
+
+/* Adjust background on scroll */
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly less transparent on scroll */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on scroll */
+}
+
+
 /* Basic styles */
 .navbar {
+  position: fixed; /* Ensure the navbar stays at the top */
+  top: 0;
+  left: 0;
+  right: 0;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Blur effect */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(90px); /* Blur effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -390,7 +434,7 @@ strong {
   color: var(--primary-color);
   font-size: var(--h5-font-size);
   font-weight: var(--font-weight-bold);
-  padding: 0;
+  padding: 0 0;
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -487,9 +531,16 @@ strong {
   top: 8px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767.98px) { /* Adjust the breakpoint as needed */
   .navbar-brand {
-    margin: 0 -300px;
+    display: inline-block;
+    padding: 0;
+    margin: 0 0px; /* Center the logo if needed */
+  }
+  
+  .navbar-brand img {
+    width: 30px; 
+    height: auto;
   }
 }
 
