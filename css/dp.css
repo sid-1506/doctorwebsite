@@ -2,15 +2,12 @@
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zain:wght@200;300;400;700;800;900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Zain:wght@200;300;400;700;800;900&display=swap");
 
 :root {
   --white-color: #ffffff;
   --primary-color: #247cff;
-  --section-bg-color: #f9f9f9;
+  --section-bg-color: #ffffff;
   --dark-color: #000000;
   --blue-color: #038bc0;
   --title-color: #565758;
@@ -250,7 +247,6 @@ strong {
   }
 }
 
-
 /*---------------------------------------
   HERO              
 -----------------------------------------*/
@@ -258,10 +254,9 @@ strong {
 .hero {
   padding-top: 0rem;
 }
-#count{
-   color: var(--blue-color);
+#count {
+  color: var(--blue-color);
 }
-
 
 .hero .container {
   position: relative;
@@ -291,7 +286,7 @@ strong {
   width: 340px;
   height: 370px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 -0px;
 } */
 
 .featured-text {
@@ -334,7 +329,6 @@ strong {
   transform: translateY(0); /* Original position */
 }
 
-
 .featured-number {
   color: var(--primary-color);
   font-size: 8rem;
@@ -342,11 +336,17 @@ strong {
 }
 
 .doctor {
+  overflow: hidden;
   border-radius: 50%;
   width: 310px;
   height: 370px;
   object-fit: cover;
   box-shadow: 0 0px 70px rgba(113, 113, 113, 0.5);
+  transition: all ease 0.6s;
+}
+
+.doctor:hover {
+  scale: 1.2;
 }
 
 @keyframes appear {
@@ -393,20 +393,30 @@ strong {
   left: 0;
   right: 0;
   padding: 20px 0;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
-  backdrop-filter: blur(10px); /* Apply the blur effect */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Semi-transparent white background */
+  backdrop-filter: blur(100px); /* Apply blur effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add a shadow for better separation */
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   z-index: 1000; /* Ensure the navbar is above other content */
+  background-color: transparent;
 }
 
 /* Adjust background on scroll */
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.5); /* Slightly less transparent on scroll */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Slightly less transparent on scroll */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on scroll */
 }
-
 
 /* Basic styles */
 .navbar {
@@ -425,7 +435,12 @@ strong {
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.5); /* Slightly less transparent on scroll */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Slightly less transparent on scroll */
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -531,15 +546,16 @@ strong {
   top: 8px;
 }
 
-@media (max-width: 767.98px) { /* Adjust the breakpoint as needed */
+@media (max-width: 767.98px) {
+  /* Adjust the breakpoint as needed */
   .navbar-brand {
     display: inline-block;
     padding: 0;
     margin: 0 0px; /* Center the logo if needed */
   }
-  
+
   .navbar-brand img {
-    width: 30px; 
+    width: 30px;
     height: auto;
   }
 }
@@ -558,8 +574,6 @@ html {
 .section.in-view {
   transform: scale(1.05);
 }
-
-
 
 /*---------------------------------------
   TIMELINE               
@@ -678,11 +692,8 @@ html {
   .timeline::before {
     height: 100%;
     border-left: none;
-
   }
 }
-
-
 
 .row {
   display: flex;
@@ -1004,7 +1015,7 @@ html {
   border-radius: 8px;
   background: #e3edf7;
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-              -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
   box-sizing: border-box;
 }
 
@@ -1018,7 +1029,7 @@ html {
 }
 
 label::before {
-  content: '+';
+  content: "+";
   margin-right: 10px;
   font-size: 24px;
   font-weight: 1000;
@@ -1043,7 +1054,7 @@ input[type="radio"] {
 }
 
 .accordion input[type="radio"]:checked + label::before {
-  content: '-';
+  content: "-";
 }
 
 /* Responsive styles */
@@ -1058,7 +1069,33 @@ input[type="radio"] {
   }
 }
 
+.disclaimer-container {
+  background-color: #ffffff; /* White background */
+  border-left: 5px solid #87cefa; /* Light blue border */
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
 
+.disclaimer-title {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #4682b4; /* Darker blue */
+  margin-bottom: 10px;
+}
+
+.disclaimer-content {
+  font-size: 1em;
+  color: #333333; /* Dark grey */
+  line-height: 1.6;
+}
+@media (max-width: 767px) {
+  .disclaimer-container{
+    width: 85%;
+  }
+}
 
 /*---------------------------------------
   BOOKING FORM            
