@@ -1077,6 +1077,7 @@ input[type="radio"] {
   max-width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  /* Remove animation property here */
 }
 
 .disclaimer-title {
@@ -1091,10 +1092,26 @@ input[type="radio"] {
   color: #333333; /* Dark grey */
   line-height: 1.6;
 }
+
 @media (max-width: 767px) {
-  .disclaimer-container{
+  .disclaimer-container {
     width: 85%;
   }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
 }
 
 /*---------------------------------------
