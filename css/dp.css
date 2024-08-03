@@ -346,7 +346,7 @@ strong {
 }
 
 .doctor:hover {
-  scale: 1.2;
+  scale: 1.1;
 }
 
 @keyframes appear {
@@ -760,12 +760,13 @@ html {
 }
 
 .text.back {
-  font-family: Josefin Sans;
+  /* font-family: Josefin Sans; */
   color: white; /* Text color */
   padding: 3px 10px; /* Optional: Add padding around the text */
-  font-size: 15px; /* Adjust the font size */
+  font-size: 20px; /* Adjust the font size */
   opacity: 0; /* Start with the text hidden */
   transition: opacity 1s; /* Smooth transition for text appearance */
+  text-transform: capitalize;
 }
 
 .image-wrapper:hover .text.front {
@@ -1139,8 +1140,9 @@ input[type="radio"] {
   border-radius: 30px;
 }
 
-.booking-form #submit-button:hover {
+ #submit-button:hover {
   background: var(--dark-color);
+  transition: 1.5s ease;
 }
 
 /*---------------------------------------
@@ -1153,6 +1155,7 @@ input[type="radio"] {
 .copyright-text {
   font-size: var(--menu-font-size);
 }
+
 
 /*---------------------------------------
   SOCIAL ICON               
