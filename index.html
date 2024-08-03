@@ -81,43 +81,6 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <script>
-      (function ($) {
-        "use strict";
-
-        // Close the navbar when a link is clicked
-        $('.navbar-nav .nav-link').click(function () {
-          $(".navbar-collapse").collapse('hide');
-        });
-
-        // Handle smooth scrolling for internal links
-        $('a[href*="#"]').on('click', function (event) {
-          if (this.pathname === location.pathname && this.hostname === location.hostname) {
-            const target = $(this.hash);
-            if (target.length) {
-              event.preventDefault();
-              $('html, body').animate({
-                scrollTop: target.offset().top - 74
-              }, 1000);
-            }
-          }
-        });
-
-        // Change navbar appearance on scroll
-        $(window).on('scroll', function () {
-          const navbar = $('.navbar');
-          if ($(this).scrollTop() > 50) {
-            navbar.addClass('scrolled');
-          } else {
-            navbar.removeClass('scrolled');
-          }
-        });
-
-        // Initialize scrollspy
-        $('body').scrollspy({ target: '#navbarNav', offset: 74 });
-
-      })(jQuery);
-    </script>
 
 
     <section class="hero" id="home">
@@ -161,8 +124,7 @@
               </h1>
 
               <p class="mb-4">Best Result for Infertility, Children complains, Female disorders, Gallstones, PCOD,
-                thyroid disorders &
-                best treatment for all acute and chronic diseases tailored to individual needs.</p>
+                thyroid disorders & all acute and chronic diseases tailored to individual needs.</p>
 
               <div class="heroLinks d-flex flex-wrap align-items-center">
                 <a class="custom-link me-4" href="tel:+918879458855" data-hover="Call Now">Call Now</a>
@@ -184,22 +146,21 @@
             <div class="col-lg-6 col-md-6 col-12">
               <h2 class="mb-lg-3 mb-3">Dr Saurabh .N. Shah</h2>
 
-              <p class="doctortext">Dr. Saurabh Shah, an M.D. <b>Homeopathic</b> consultant specializing in
-                <b>gynecological</b> and
-                <b>pediatric</b> cases,
+              <p class="doctortext">Dr. Saurabh Shah, an <b id="imptext">M.D. Homeopathic</b> consultant specializing in
+                <b id="imptext">Gynecological</b> and
+                <b id="imptext">Pediatric</b> cases,
                 integrates spirituality with medicine to restore health by achieving mental peace. He graduated from
-                Chandaben Homeopathic Medical College and post-graduated from Kakasaheb Mhaske Homeopathic Medical
+                C.M.P Homeopathic Medical College <b id="imptext">Mumbai</b> and post-graduated from Kakasaheb Mhaske
+                Homeopathic Medical
                 College
-                in 2014. Dr. Shah began his practice at a charitable clinic in Andheri and now treats over <b>1000</b>
+                in 2014. Dr. Shah began his practice at a charitable clinic in Andheri and now treats over <b
+                  id="imptext">1000</b>
                 patients from Mumbai and internationally every month.
               </p>
-
-              <!-- <p>YInteger posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum.  <a rel="nofollow" href="http://www.naemazam.com" target="_blank">contact</a> me</p> -->
             </div>
 
             <div class="col-lg-4 col-md-5 col-12 mx-auto">
               <div class="featured-circle justify-content-center align-items-center">
-                <!-- <p class="featured-text"><span class="featured-number">12</span> Years<br> of Experiences</p> -->
                 <img class="doctor" src="images/gallery/image1.jpeg" width="100%" alt="doctor">
               </div>
             </div>
@@ -304,7 +265,8 @@
               <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
                 <h3 class=" text-light">Chronic disease</h3>
 
-                <p>We are managing all the chronic diseases in both the sexes and age groups with Successful results and
+                <p>We are managing all the chronic diseases in both the sexes and <b id="imptext">All age groups</b>
+                  with Successful results and
                   utmost sincerity.
                 </p>
               </div>
@@ -324,7 +286,7 @@
                 <h3 class=" text-light">Acute disease</h3>
 
                 <p>We are specialized in the rapid and effective treatment of acute diseases with faster results than
-                  contemporary medicine and NO side effects.</p>
+                  contemporary medicine and <b id="imptext">No side effects.</b></p>
               </div>
 
               <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
@@ -339,8 +301,6 @@
         </div>
     </section>
 
-
-
     <section class="section-padding pb-0" id="FAQ">
       <h2 class="text-center mb-lg-5 mb-4">FAQ</h2>
 
@@ -351,57 +311,58 @@
             <input type="radio" name="accordion" id="first" checked>
             <label for="first">Can Homeopathy and Allopathy be taken together?</label>
             <div class="content">
-              <p>Yes - we do allow in diseases like Diabetes, Hypertension, Thyroid, Cancer etc. or medicines like
-                anti-pyretic’s for reducing fever in kids.
-                <br>- As our medicines are working at very deeper level to cure the infection and bring the whole Health
+              <p>Yes <br><i class="bi bi-dot"></i>We do <b id="imptext">allow</b> in diseases like Diabetes, Hypertension, Thyroid, Cancer etc. or
+                medicines like
+                <b id="imptext">anti-pyretic’s for reducing fever in kids.</b>
+                <br><i class="bi bi-dot"></i>As our medicines are working at very deeper level to cure the infection and bring the whole Health
                 in Harmony.
               </p>
             </div>
           </li>
           <li>
             <input type="radio" name="accordion" id="second">
-            <label for="second">Can Homeopathic medicines be taken during Pregnancy?</label>
+            <label for="second">Can Homeopathic medicines be given to one day Infant/child?</label>
             <div class="content">
-              <p>Yes <br>- we are promoting the use of Homeopathic medicines during pregnancy for the following reasons
-                <br>-To cater to all complains during pregnancy by Homeopathic medicines, as during this phase modern
-                medicines can be risky for coming child.
-                <br>-For managing emotional Health of pregnant mother - as it had been one of the major reason of Birth
-                defects.
-                <br>-For good immunity of coming child- as with our medicines we are able to reduce the genetic load of
-                parents (Miasmatic load) being passed to newborn.
-                <br>-we have seen babies born more Healthy and disease free when mother is under Homeopathic medicines.
-                <br>-Most important reason is - we are able to help mother deliver by Normal delivery- as under
-                Homeopathy we have medicines for developing smooth and proper Labor pain.
+              <p>Yes <br><i class="bi bi-dot"></i>It is one the <b id="imptext">safest</b> and most accepted systems of medicine <b
+                  id="imptext">for</b> these cute <b id="imptext">infants</b> , because of the
+                following reasons.
+                <br><i class="bi bi-dot"></i><b id="imptext"> No side-effects</b>
+                <br><i class="bi bi-dot"></i>You can <b id="imptext">avoid</b> their <b id="imptext">antibiotic</b> exposure
+                <br><i class="bi bi-dot"></i>Homeopathic medicines work according to Nature's law of Healing, so kids <b id="imptext">develop
+                  good immunity</b> and
+                stay healthy for long periods.
+                <br><i class="bi bi-dot"></i>Safe and gentle and permanent <b id="imptext">cure</b>.
+                <br><i class="bi bi-dot"></i>We have treated many thousand infants in our clinic, just by Homeopathic medicine.
               </p>
             </div>
           </li>
           <li>
-            <input type="radio" name="accordion" id="third">
-            <label for="third">Can Homeopathic medicines be given to one day Infant/child?</label>
-            <div class="content">
-              <p>Yes - it is one the safest and most accepted systems of medicine for these cute infants, because of the
-                following reasons.
-                <br>-No side-effects
-                <br>-You can avoid antibiotic exposure
-                <br>-Homeopathic medicines work according to Nature's law of Healing, so kids develop good immunity and
-                stay healthy for long periods.
-                <br>-Safe and gentle and permanent cure.
-                <br>-We have treated many thousand infants in our clinic, just by Homeopathic medicine.
-              </p>
-            </div>
+            <div>
+              <input type="radio" name="accordion" id="third">
+              <label for="third">Can Homeopathic medicines be taken during Pregnancy?</label>
+              <div class="content">
+                <p>Yes <br><i class="bi bi-dot"></i>Homeopathic medicines provide a safe and holistic approach during pregnancy by addressing
+                  various complaints, <b id="imptext">supporting emotional well-being</b> , enhancing immunity, reducing
+                  genetic burdens, and
+                  promoting healthier babies, while also <b id="imptext">facilitating</b> smoother labor and <b
+                    id="imptext">Normal delivery</b>.
+                </p>
+              </div>
           </li>
           <li>
             <input type="radio" name="accordion" id="fourth">
-            <label for="fourth">Homeopathy and Pregnancy ?</label>
+            <label for="fourth">How has homeopathy been used during pregnancy historically?</label>
             <div class="content">
               <p>Yes
-                <br>-Homeopathy being a more than 200-year-old system of medicine, had been the first choice for
-                pregnancy-related complaints of millions of mothers, all across the globe since generations.
-                <br>-Divine Homeopathic Clinic and Mumbadevi Homeopathic Hospital in vile Parle, have been since decades
+                <br><i class="bi bi-dot"></i><b id="imptext">Homeopathy</b> being a more than 200-year-old system of medicine, had been the <b
+                  id="imptext">first choice</b> for
+                <b id="imptext">pregnancy-related complaints</b> of millions of mothers, all across the globe since
+                generations.
+                <br><i class="bi bi-dot"></i>Divine Homeopathic Clinic and Mumbadevi Homeopathic Hospital in vile Parle, have been since decades
                 one
                 of the first choice for pregnant mothers for a Healthy Pregnancy and Normal Delivery.
-                <br>-By forming a close bond with modern medicine Gynecologists
-                <br>-we try our best to avoid Caesarean section-
+                <br><i class="bi bi-dot"></i>By forming a close bond with modern medicine Gynecologists
+                <br><i class="bi bi-dot"></i><b id="imptext">We try our best to avoid Caesarean section,</b>
                 as we are aware about benefits of normal delivery.
               </p>
             </div>
@@ -410,9 +371,12 @@
             <input type="radio" name="accordion" id="fifth">
             <label for="fifth">Role of Homeopathy for Miscarriage</label>
             <div class="content">
-              <p>-Homeopathy has some amazing and effective medicines for conditions like
-                2nd 3rd or 5th month past miscarriages or miscarriages due to any physical or emotional cause.
-                <br>-We give a 3-5 month, pre-conceive Homeopathic course to these females for their past miscarriage
+              <p><i class="bi bi-dot"></i><b id="imptext">Homeopathy</b> has some <b id="imptext">amazing</b> and effective <b
+                  id="imptext">medicines for</b> conditions like
+                2nd 3rd or 5th month past <b id="imptext">miscarriages</b> or miscarriages due to any physical or
+                emotional cause.
+                <br><i class="bi bi-dot"></i>We give a 3-5 month, <b id="imptext">pre-conceive Homeopathic course</b> to these females for their
+                past miscarriage
                 condition, and are able to see some really strong sustaining pregnancies and Healthy baby deliveries.
               </p>
             </div>
@@ -421,13 +385,16 @@
             <input type="radio" name="accordion" id="sixth">
             <label for="sixth">Role of Homeopathy for Threatened Abortion </label>
             <div class="content">
-              <p>-With the help of our Homeopathic medicines, we have been able to save many infants from abortion,
+              <p><i class="bi bi-dot"></i>With the help of our Homeopathic medicines, we have been able to <b id="imptext">save many infants</b>
+                from abortion,
                 which can happen due to unknown reasons or physical or emotional causes.
-                <br>We have specific Homeopathic medicines with proper research for such conditions.
-                Do give us a try, during such a difficult phase, we can combine our medicines with modern medicine, as
+                <br><i class="bi bi-dot"></i>We have specific Homeopathic medicines with proper research for such conditions.
+                Do give us a try, during such a difficult phase, <b id="imptext">we can combine our medicines with
+                  modern medicine</b> , as
                 saving the child and mother is our priority.
-                <br>Although when a mother is under homeopathic medicines from start, we can avoid such incidences, by
-                timely intervention by our medicines -helping the emotional and physical cause.
+                <br><i class="bi bi-dot"></i>Although when a mother is under homeopathic medicines from start, <b id="imptext">we can avoid such
+                  incidences</b> , by
+                timely intervention by our medicines <br><i class="bi bi-dot"></i>helping the emotional and physical cause.
               </p>
             </div>
           </li>
@@ -444,21 +411,22 @@
             <input type="radio" name="accordion" id="eight">
             <label for="eight"> What is the role of Homeopathy for Post-delivery complaints ?</label>
             <div class="content">
-              <p>Homeopathy has some amazing results in these complains, as we have some great medicines for acute
+              <p><i class="bi bi-dot"></i>Homeopathy has <b id="imptext">amazing results</b> in these complains, as we have some great medicines
+                for acute
                 management of these complains.
-                <br>Since years in our clinic, we have been catering to these complaints.
+                <br><i class="bi bi-dot"></i>Since years in our clinic, we have been catering to these complaints.
               </p>
             </div>
           </li>
 
           <li>
             <input type="radio" name="accordion" id="nine">
-            <label for="nine"> What all Post Delivery complains we can approach a Homeopathy ?</label>
+            <label for="nine"> What all Post Delivery complains we can approach a Homeopath ?</label>
             <div class="content">
-              <p>Breast Abscess,
+              <p><i class="bi bi-dot"></i>Breast Abscess,
                 Episiotomy stitches Healing,
                 C-section stitches healing,
-                C-section -back pain post-c-section,
+                Back pain post-c-section,
                 Deficient milk production,
                 Cracked Nipples,
                 Child not feeding/suckling,
@@ -466,7 +434,7 @@
                 Excess Bleeding,
                 Or any complaints post delivery.
 
-                <br>-In case any of your complaints are not mentioned, still as an opinion from us, we would guide you.
+                <br><i class="bi bi-dot"></i>In case any of your complaints are not mentioned, still as an opinion from us, we would guide you.
               </p>
             </div>
           </li>
@@ -475,19 +443,19 @@
             <input type="radio" name="accordion" id="ten">
             <label for="ten">What all Infant conditions Homeopathy be of Help ?</label>
             <div class="content">
-              <p>Neonatal Jaundice,
+              <p><i class="bi bi-dot"></i>Neonatal Jaundice,
                 Cradle cap,
-                Skin complains,
-                Recurrent cold and cough,
+                <b id="imptext">Skin complains</b> ,
+                <b id="imptext">Recurrent cold and cough</b> ,
                 Constipation,
-                Stomach pain/colic,
+                <b id="imptext"> Stomach pain/colic </b>,
                 Ear pain,
                 Gaseous complains,
                 Feeding issues,
                 Underweight child,
                 Preterm child,
-                Irritability in the kid,
-                <br>-In case any of your complaints are not mentioned, still as an opinion from us, we would guide you.
+                <b id="imptext">Irritability in the kid</b>,
+                <br><i class="bi bi-dot"></i>In case any of your complaints are not mentioned, still as an opinion from us, we would guide you.
 
               </p>
             </div>
@@ -496,13 +464,33 @@
             <input type="radio" name="accordion" id="eleven">
             <label for="eleven">Role of Homeopathy In Delivery</label>
             <div class="content">
-              <p>Homeopathy has some effective remedies to help develop Normal labor pains in shortest duration
+              <p><i class="bi bi-dot"></i>Homeopathy has some <b id="imptext">effective remedies</b> to help <b id="imptext">develop Normal
+                  labor</b> pains in shortest duration
                 possible.
-                <br>At times we have heard experiences like delivery happened in 2hrs too, from start of labor pain.
+                <br><i class="bi bi-dot"></i>At times we have heard experiences like delivery happened in 2hrs too, from start of labor pain.
                 <br>In a few cases after modern medicine Labor pain gel was used, it normally takes 12 to 15 hours for
-                proper pain development, but on adding Homeopathic medicines, this time duration was reduced
-                drastically.
-                <br>We have medicines for Closed OS and delayed labor pains too.
+                proper pain development, <b id="imptext">but on adding Homeopathic medicines, this time duration was
+                  reduced
+                  drastically</b>.
+                <br><i class="bi bi-dot"></i>We have medicines for Closed OS and delayed labor pains too.
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="twelve">
+            <label for="twelve"> What is the role of Homeopathy for Post-delivery complaints ?</label>
+            <div class="content">
+              <p>Yes <br>By use of Homeopathic medicines, you are basically <b id="imptext">improving the overall strength of Uterus</b>, thus
+                in the conceive <b id="imptext">process chances of success increases</b> when the embryo is planted over there in IVF
+                process.
+              </p>
+            </div>
+          </li>
+          <li>
+            <input type="radio" name="accordion" id="last">
+            <label for="last"> Role of Homeopathy in Pregnancy induced diabetes, Blood pressure (eclampsia) or Low Hemoglobin ?</label>
+            <div class="content">
+              <p>Homeopathy has given much help to these cases and helped in good progress of Healthy pregnancy.
               </p>
             </div>
           </li>
@@ -721,8 +709,9 @@
           <div class="col-lg-2 col-md-6 col-12 my-4 my-lg-0">
             <h5 class="mb-lg-4 mb-3">My Clinic <i class="bi bi-geo-fill"></i></h5>
 
-            <p> <a href="https://maps.app.goo.gl/vsmLWM8Ymb9UrQH47" target="_blank"> Shop no C /40, Harias Dream Park, behind Ashoka hotel, landmark Dmart Opposite Blue dart office,
-              vedant school road, Hatkesh Rd, Mira Road East, Maharashtra 401107</a></p>
+            <p> <a href="https://maps.app.goo.gl/vsmLWM8Ymb9UrQH47" target="_blank"> Shop no C /40, Harias Dream Park,
+                behind Ashoka hotel, landmark Dmart Opposite Blue dart office,
+                vedant school road, Hatkesh Rd, Mira Road East, Maharashtra 401107</a></p>
           </div>
 
           <div class="col-lg-3 col-md-6 col-12 ms-auto">
@@ -753,8 +742,9 @@
           <span class="col-lg-3 col-12 ms-auto">
             <p class="copyright-text">
               <br>&copy;
-              Developed by <a href="https://www.linkedin.com/in/krishnakant-rout-867720292/" target="_blank">Krishnakant
+              Developed by <a href="https://www.linkedin.com/in/krishnakant-rout-867720292/" target="_blank" class="devname">Krishnakant
                 Rout
+            </p>
           </span>
 
         </div>
@@ -846,15 +836,7 @@
     });
   </script>
 
-  <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script> -->
+
 </body>
 
 </html>
