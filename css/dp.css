@@ -1046,11 +1046,11 @@ input[type="radio"] {
   line-height: 26px;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.5s, padding 0.5s;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
 }
 
 .accordion input[type="radio"]:checked + label + .content {
-  max-height: 400px;
+  max-height: 1000px; /* Increased max-height to ensure all content is visible */
   padding: 10px 10px 20px;
 }
 
@@ -1068,7 +1068,6 @@ input[type="radio"] {
     width: 100%;
     margin: 10px -13px;
   }
-
 }
 
 .disclaimer-container {
@@ -1077,11 +1076,10 @@ input[type="radio"] {
   padding: 20px;
   max-width: 600px;
   align-items: start;
-  /* Remove animation property here */
 }
 
 .disclaimer-title {
-  font-size: 1.3em;
+  font-size: 1.1em;
   color: #000000; /* Darker blue */
   margin-bottom: 10px;
 }
@@ -1113,6 +1111,7 @@ input[type="radio"] {
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
 
 /*---------------------------------------
   BOOKING FORM            
