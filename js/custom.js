@@ -6,6 +6,17 @@
     $(".navbar-collapse").collapse("hide");
   });
 
+
+  // PRELOADING
+
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.body.classList.add('loaded');
+    }, 4000); // Adjust the timeout if needed
+});
+
+
+
   // REVIEWS CAROUSEL
   $(".reviews-carousel").owlCarousel({
     center: true,
